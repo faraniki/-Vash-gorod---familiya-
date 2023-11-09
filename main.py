@@ -25,7 +25,8 @@ class MyWidget(QMainWindow):
     def paintEvent(self, event):
         if self.drawCycle:
             qp = QPainter(self)
-            qp.setBrush(QColor("yellow"))
+            qp.setPen(QColor("yellow"))
+            qp.setBrush(QColor("yellow")) # Рисую круги, т.к жёлтую окружность невозможно рассмотреть на белом экране
 
             r = random.randint(10, 100)
             x = random.randint(r, abs(self.drawLbl.rect().width() - r))
